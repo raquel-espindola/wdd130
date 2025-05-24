@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #90e0ef;
+  --accent1-color: #00b4d8;
+  --accent2-color: #caf0f8;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero h1,
+.hero article {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.hero article img {
+  float: right;
+}
+
+footer a img {
+  text-decoration: none;
+}
