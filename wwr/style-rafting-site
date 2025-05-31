@@ -1,38 +1,164 @@
-:root {
-  --primary-color: #0077b6;
-  --secondary-color: #90e0ef;
-  --accent1-color: #00b4d8;
-  --accent2-color: #caf0f8;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: white;
-  margin: 0;
-  padding: 0;
+  background-color: #f4f4f4;
 }
 
-header nav a {
+
+.main-header {
+  background-color: #d5c6f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: #333;
+  font-weight: bold;
 }
 
+.nav-menu a:hover {
+  color: purple;
+}
+
+/* Hero */
 .hero {
-  position: relative;
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.hero h1,
-.hero article {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
+.hero h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
-.hero article img {
-  float: right;
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  align-items: center;
 }
 
-footer a img {
-  text-decoration: none;
+.hero-content p {
+  flex: 1 1 300px;
+}
+
+.hero-image {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+.history {
+  background-color: #e0d4f4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.history-text {
+  flex: 1 1 250px;
+}
+
+.history-image img {
+  width: 150px;
+  height: auto;
+}
+
+
+.adventure {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.adventure h2 {
+  margin-bottom: 30px;
+}
+
+.adventure-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-item {
+  width: 120px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.footer {
+  background-color: #d5c6f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+
+@media (max-width: 600px) {
+  .hero-content,
+  .history {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-image,
+  .history-image img {
+    margin: 0 auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item {
+    width: 100px;
+  }
 }
